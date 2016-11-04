@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/zhihu.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">首页</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="page3">跳转</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Page 2</div>
+      </div>
+      <div class="app-content">
+        Page 2 is lonely
+      </div>
+    </div>
+
+
+
+    <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back ></div>
+        <div class="app-title">Page 3</div>
+      </div>
+      <div class="app-content">
+        <div class="app-button">My button</div>
+      </div>
+    </div>
+
+    <script src="js/zepto.js"></script>
+    <script src="js/app.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>>
+  </body>
+</html>
