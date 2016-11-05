@@ -11,14 +11,15 @@
 }
 
 .media-figure {
-    margin-right: 1em
+    margin-right: .5em
 }
 
 .media-body {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
-    flex: 1
+    flex: 1;
+    color:#aaa;
 }
 
 .media-body,.Media-body

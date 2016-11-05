@@ -1,68 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>知乎日报</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="css/app.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/zhihu.css">
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="app-page" data-page="home">
-      <div class="app-topbar blue">
-        <div class="app-title">知乎日报</div>
-      </div>
-      <div class="app-content">
-           <script type="text/x-template" id=js-story-template>
-                    <li id="items" style="border-top:0;height:auto;padding:0;white-space: normal;overflow:inherit">
-                        <div class="media">
-                            <img class="media-figure Image" src="${image}" >
-                            <div class="media-body">
-                                <h3 class="media-title">${title}</h3>
-                            </div>
-                         </div>
-                    </li>
-            </script>
-        <div class=" app-section-stories">
-          <ul class="app-list" id='js-story-container'>
-
-          </ul>
+        <div class="app-topbar blue">
+            <div class="app-title">知乎日报</div>
         </div>
-        <div class="app-section app-section-top-stories">
-            <ul class="app-list">
+        <div class="app-content">
+
+            <script type="text/x-template" id="js-story-template">
              
-              <li>Item 2</li>
-              <li>Item 3</li>
-            </ul>
+                  <li  class="story app-button" style="border-top:0;height:auto;padding:0;white-space: normal;overflow:inherit" data-target="detail" data-target-args='{"id":${id}}'>
+                    <div class="media media--center">
+                        <img class="media-figure" src="${image}" />
+                        <div class="media-body">
+                            <p class="media-content">${title}</p>
+                        </div>
+                    </div>
+                </li>
+            </script>
+
+            <div class="app-section-stories">
+                <ul class="app-list" id="js-story-container">
+                </ul>
+            </div>
+
         </div>
-      </div>
-    </div>
- 
-    <div class="app-page" data-page="page2">
-      <div class="app-topbar">
-        <div class="app-button left" data-back data-autotitle></div>
-        <div class="app-title">Page 2</div>
-      </div>
-      <div class="app-content">
-        Page 2 is lonely
-      </div>
     </div>
 
+    <div class="app-page" data-page="detail">
+        <div class="app-topbar blue">
+            <div class="app-button  left" data-back ></div>
+            <div class="js-story-title app-title">详情页</div>
+        </div>
+        <div class="app-content">
+            <img class="js-story-cover story-cover" />
+            <div class="js-story-content story-content"></div>
 
-
-    <div class="app-page" data-page="page3">
-      <div class="app-topbar">
-        <div class="app-button left" data-back ></div>
-        <div class="app-title">Page 3</div>
-      </div>
-      <div class="app-content">
-        <div class="app-button">My button</div>
-      </div>
+           
+        </div>
     </div>
-
     <script src="js/zepto.js"></script>
     <script src="js/app.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>>
-  </body>
+    <script src="js/app.js"></script>
+</body>
 </html>
