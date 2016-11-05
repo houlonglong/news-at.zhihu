@@ -22,6 +22,15 @@ app.get(/^\/api\/.+$/,function(req,res,next){
 	})
 })
 
+//反倒链
+app.get('/img/proxy', function (req, res, next) {
+	if (!req.query.img) {
+		res.status(400);
+		res.send('Bad Request');
+	}
+
+	request.get({ url: req.query.img, headers: { referrer: 'http://news-at.zhihu.com/' }}).pipe(res);
+});
 
 app.listen(3000,function(){
 	console.log('app.js+zepto app ready port 3000')
